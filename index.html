@@ -1,13 +1,105 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Numbers</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                min-height: 100vh;
+                background-color: #f3f4f6;
+                padding: 20px;
+            }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                max-width: 1152px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow:
+                    0 1px 3px rgba(0, 0, 0, 0.1),
+                    0 1px 2px rgba(0, 0, 0, 0.06);
+                padding: 24px;
+            }
+
+            .logo {
+                width: 128px;
+                height: 128px;
+                display: block;
+                margin: 0 auto 24px auto;
+            }
+
+            .numbers-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+                width: 100%;
+            }
+
+            .number-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                max-width: 96px;
+                padding: 16px;
+                border: 1px solid #d1d5db;
+                border-radius: 6px;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .sold {
+                color: #22c55e;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            .available {
+                color: #ef4444;
+                font-weight: 700;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <img id="logo" src="" alt="Logo" class="logo" />
+                <div class="numbers-grid" id="numbers-grid"></div>
+            </div>
+        </div>
+
+        <script src="script.js" type="text/javascript"></script>
+        <script>
+            document.getElementById("logo").src = bg;
+
+            const grid = document.getElementById("numbers-grid");
+
+            numbers.forEach(({ id, name, sale }) => {
+                const item = document.createElement("div");
+                item.className = "number-item";
+
+                const span = document.createElement("span");
+                span.className = sale ? "sold" : "available";
+                span.textContent = sale ? name : id;
+
+                item.appendChild(span);
+                grid.appendChild(item);
+            });
+        </script>
+    </body>
 </html>
