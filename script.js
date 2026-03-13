@@ -71,8 +71,8 @@ var numbers = [
     },
     {
         id: 15,
-        name: "",
-        sale: false,
+        name: "Geraldo",
+        sale: true,
     },
     {
         id: 16,
