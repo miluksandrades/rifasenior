@@ -121,8 +121,8 @@ var numbers = [
     },
     {
         id: 25,
-        name: "",
-        sale: false,
+        name: "Pyterson",
+        sale: true,
     },
     {
         id: 26,
@@ -136,8 +136,8 @@ var numbers = [
     },
     {
         id: 28,
-        name: "",
-        sale: false,
+        name: "Pyterson",
+        sale: true,
     },
     {
         id: 29,
