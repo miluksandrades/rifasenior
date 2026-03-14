@@ -36,8 +36,8 @@ var numbers = [
     },
     {
         id: 8,
-        name: "",
-        sale: false,
+        name: "Chefe Laura",
+        sale: true,
     },
     {
         id: 9,
